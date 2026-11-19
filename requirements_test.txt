@@ -1,0 +1,6 @@
+# Tests target Home Assistant 2026.11.
+# pytest-homeassistant-custom-component stopped at 2026.10 (0.13.375).
+# Home Assistant publishes the replacement as pytest-homeassistant, one
+# release per Core version. Do not install both.
+pytest-homeassistant==2026.11.2
+ruff==0.17.5
