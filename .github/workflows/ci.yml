@@ -40,3 +40,7 @@ jobs:
         uses: hacs/action@main
         with:
           category: integration
+          # topics is a GitHub repo setting (About → Topics), not a file.
+          # The checkout token cannot set it. Add home-assistant, hacs,
+          # hacs-integration, and custom-component, then drop this ignore.
+          ignore: topics

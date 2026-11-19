@@ -102,6 +102,7 @@ def test_manifest_matches_the_approved_names() -> None:
     assert manifest["domain"] == DOMAIN
     assert manifest["name"] == "Call Webhook"
     assert manifest["version"] == "0.1.0"
+    assert manifest["categories"] == ["diy_makers.web_data_connectors"]
     assert manifest["config_flow"] is True
     assert manifest["iot_class"] == "cloud_push"
     assert manifest["requirements"] == []

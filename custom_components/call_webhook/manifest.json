@@ -1,6 +1,7 @@
 {
   "domain": "call_webhook",
   "name": "Call Webhook",
+  "categories": ["diy_makers.web_data_connectors"],
   "codeowners": ["@rbridal"],
   "config_flow": true,
   "documentation": "https://github.com/rbridal/ha-call-webhook",

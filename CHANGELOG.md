@@ -17,6 +17,6 @@ First release. Requires Home Assistant 2026.11.0 or newer.
 - Optional response data (`status`, `ok`, `headers`, `body`) for `response_variable`.
 - Timeouts, connection errors, and non-2xx responses raise `HomeAssistantError`. A non-2xx response is returned instead when the caller asked for a response.
 - Bearer token and `Authorization` redaction in debug logs and error messages.
-- HACS metadata, brand icon, and CI for pytest, hassfest, and HACS validation.
+- HACS metadata, brand icon, browse category DIY & makers → Web & data connectors, and CI for pytest, hassfest, and HACS validation.
 
 [0.1.0]: https://github.com/rbridal/ha-call-webhook/releases/tag/v0.1.0

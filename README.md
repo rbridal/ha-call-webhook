@@ -175,6 +175,8 @@ pytest
 
 Tests run against Home Assistant 2026.11 via `pytest-homeassistant` (the package that replaced `pytest-homeassistant-custom-component` for this Core version).
 
+HACS also checks GitHub repository topics. On the repository page, open **About** and add `home-assistant`, `hacs`, `hacs-integration`, and `custom-component`. CI skips that one check until those topics exist, because the workflow token cannot change repository settings.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
