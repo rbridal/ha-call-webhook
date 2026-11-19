@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Call Webhook",
+        "description": "Adds the Call Webhook: Send action. Each automation sets its own URL, token, and body. Nothing else is stored here."
+      }
+    },
+    "abort": {
+      "already_configured": "Call Webhook is already set up. One instance covers every webhook."
+    }
+  },
+  "services": {
+    "send": {
+      "name": "Send",
+      "description": "Send an HTTP request to a webhook URL.",
+      "fields": {
+        "url": {
+          "name": "URL",
+          "description": "Webhook URL. http and https only."
+        },
+        "bearer_token": {
+          "name": "Bearer token",
+          "description": "Sent as Authorization: Bearer when filled in. Typed on this action. Home Assistant stores it in the automation."
+        },
+        "data": {
+          "name": "Data",
+          "description": "JSON object. Templates are rendered by the automation before the request. POST, PUT, PATCH, and DELETE send it as the body. GET sends it as query parameters."
+        },
+        "method": {
+          "name": "Method",
+          "description": "HTTP method. Defaults to POST."
+        },
+        "headers": {
+          "name": "Headers",
+          "description": "Extra request headers. Authorization from Bearer token and Content-Type for a JSON body replace matching headers."
+        },
+        "timeout": {
+          "name": "Timeout",
+          "description": "How long to wait, in seconds. Defaults to 10. Maximum 300."
+        },
+        "verify_ssl": {
+          "name": "Verify SSL",
+          "description": "Verify the server TLS certificate. Defaults to on."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "timeout": {
+      "message": "Timed out calling {method} {url} after {timeout} seconds."
+    },
+    "request_failed": {
+      "message": "Could not call {method} {url}: {error}"
+    },
+    "http_status": {
+      "message": "{method} {url} returned HTTP {status}: {body}"
+    }
+  }
+}

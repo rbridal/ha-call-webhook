@@ -1,0 +1,51 @@
+send:
+  fields:
+    url:
+      required: true
+      example: "https://hooks.example.com/ingest"
+      selector:
+        text:
+          type: url
+    bearer_token:
+      required: false
+      selector:
+        text:
+          type: password
+    data:
+      required: false
+      example: |
+        ip: "{{ states('sensor.myip') }}"
+        location: shop
+      selector:
+        object:
+    method:
+      required: false
+      default: POST
+      selector:
+        select:
+          options:
+            - POST
+            - PUT
+            - PATCH
+            - GET
+            - DELETE
+          mode: dropdown
+    headers:
+      required: false
+      selector:
+        object:
+    timeout:
+      required: false
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 300
+          step: 1
+          unit_of_measurement: s
+          mode: box
+    verify_ssl:
+      required: false
+      default: true
+      selector:
+        boolean:

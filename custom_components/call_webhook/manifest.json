@@ -1,0 +1,15 @@
+{
+  "domain": "call_webhook",
+  "name": "Call Webhook",
+  "categories": ["diy_makers.web_data_connectors"],
+  "codeowners": ["@rbridal"],
+  "config_flow": true,
+  "documentation": "https://github.com/rbridal/ha-call-webhook",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/rbridal/ha-call-webhook/issues",
+  "loggers": ["custom_components.call_webhook"],
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}
